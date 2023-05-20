@@ -1,0 +1,185 @@
+@font-face {
+    font-family: font1;
+    src: url(../fontes/Quantify.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(../fontes/Nehad.ttf) format(truetype);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.allcontainer{
+    max-width: 1366px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    color: white;
+    background-color: rgb(23, 23, 31);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(1, 1, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.navbar-logo {
+    margin-left: 5%;
+    font-family: font2;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    font-size: 1.6em;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.2em;
+    margin-right: 4%;
+}
+
+.navbar ul>li a {
+    color: white;
+    margin: 0 15px;
+}
+
+.navbar ul>li a:hover {
+    border-top: 1px solid rgb(0, 221, 255);
+}
+
+.content-btn a{
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background-color: rgb(0, 221, 255);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 510px;
+}
+
+.content-inform{
+    margin-left: 5%;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.content-inform h2>span, p>span{
+    color: rgb(0, 221, 255);
+}
+
+.content-img {
+    width: 30%;
+    height: 300px;
+    background-image: url(../img/DavidFilho.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 5%;
+    box-shadow: 0px 0px 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 221, 255);
+    animation: img 2s linear infinite;
+}
+
+@keyframes img{
+    0%{top: 0;}
+    50%{top: 10%;}
+    100%{top: 0;}
+    
+}
+
+
+.content-icones{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8em;
+    padding: 5px 0;
+}
+
+.content-icones a{
+    color: rgb(0, 221, 255);
+    padding: 5px 0;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-menu {
+        margin-right: 10px;
+        display: block;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 50%;
+        display: block;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        background-color: rgb(1, 1, 1);
+        border-radius: 8px;
+        margin: 3px;
+    }
+
+    .navbar ul.open {
+        right: 0;
+    }
+
+    .navbar ul>li {
+        width: 100%;
+        padding: 18px;
+    } 
+   
+}
+
+@media screen and (max-width:705px) {
+    .content{
+        justify-content: center;
+        align-items: center;
+    }
+    .content-inform{
+        margin-left: 0;
+    }
+    .content-img{
+        width: 400px;
+    }
+    .content-img{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:450px){
+    .content{
+        padding: 15px;
+    }
+
+    .navbar ul>li a{
+        font-size: 15px;
+    }
+}
